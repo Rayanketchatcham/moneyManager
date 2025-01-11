@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:moneymanager/Pages/AccountPage.dart';
 import 'package:moneymanager/Pages/Homepage.dart';
+import 'package:moneymanager/Pages/NotificationPage.dart';
+import 'package:moneymanager/Pages/SettingPage.dart';
 import 'package:moneymanager/Pages/ViewChart.dart';
 import 'package:moneymanager/Pages/addExpense.dart';
 
@@ -28,6 +31,9 @@ class MyApp extends StatelessWidget {
           '/': (context) => Homepage(),
           '/addExpense': (context) => Addexpense(),
           '/ViewChart': (context) => viewChart(),
+          '/account': (context) => Accountpage(),
+          '/notification': (context) => Notificationpage(),
+          '/setting': (context) => Settingpage(),
         });
   }
 }
