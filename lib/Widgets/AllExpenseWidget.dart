@@ -12,7 +12,7 @@ class _AllexpensewidgetState extends State<Allexpensewidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+      padding: EdgeInsets.symmetric(horizontal: 25,),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
