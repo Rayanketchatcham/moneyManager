@@ -5,6 +5,7 @@ import 'package:moneymanager/Pages/NotificationPage.dart';
 import 'package:moneymanager/Pages/SettingPage.dart';
 import 'package:moneymanager/Pages/ViewChart.dart';
 import 'package:moneymanager/Pages/addExpense.dart';
+import 'package:moneymanager/assets/app_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,24 +17,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Money Manager',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-            primaryColor: Colors.grey,
-            colorScheme: ColorScheme.fromSwatch(
-              primarySwatch: Colors.grey,
-            ).copyWith(
-              secondary: Color(0xFFF3F3F3), // Couleur secondaire
-              tertiary: Color(0xFF830DFB), // Couleur tertiaire
-            ),
-            scaffoldBackgroundColor: Colors.white),
-        routes: {
-          '/': (context) => Homepage(),
-          '/addExpense': (context) => Addexpense(),
-          '/ViewChart': (context) => viewChart(),
-          '/account': (context) => Accountpage(),
-          '/notification': (context) => Notificationpage(),
-          '/setting': (context) => Settingpage(),
-        });
+      title: 'Money Manager',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: AppColors.primaryColor, // Couleur principale
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.deepPurple, // Swatch proche du violet
+        ).copyWith(
+          secondary: AppColors.secondaryColor, // Couleur secondaire
+          tertiary: AppColors.tertiaryColor, // Couleur tertiaire
+        ),
+        scaffoldBackgroundColor: AppColors.backgroundColor,
+      ),
+      routes: {
+        '/': (context) => Homepage(),
+        '/addExpense': (context) => Addexpense(),
+        '/ViewChart': (context) => viewChart(),
+        '/account': (context) => Accountpage(),
+        '/notification': (context) => Notificationpage(),
+        '/setting': (context) => Settingpage(),
+      },
+    );
   }
 }
