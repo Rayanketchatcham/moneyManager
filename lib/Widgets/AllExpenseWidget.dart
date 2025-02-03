@@ -12,7 +12,7 @@ class _AllexpensewidgetState extends State<Allexpensewidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 25,),
+      padding: EdgeInsets.symmetric(horizontal: 25,vertical: 5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -20,52 +20,27 @@ class _AllexpensewidgetState extends State<Allexpensewidget> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'All Expenses',
+                'Transactions History',
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 18,
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                width: 100,
-                height: 30,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Theme.of(context).colorScheme.secondary),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      'View All',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 2,
-                    ),
-                    Icon(
-                      Icons.keyboard_arrow_down,
-                      size: 25,
-                      color: Colors.black,
-                    )
-                  ],
+              Text(
+                'See All',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
                 ),
-              )
+              ),
             ],
-          ),SizedBox(height: 10,),
-          Text(
-            'Today',
-            style: TextStyle(
-                fontSize: 14, fontWeight: FontWeight.bold, color: Colors.grey),
-          ),
+          ),SizedBox(height: 8,),
+
           Expenseitem(),
           Expenseitem(),
-          Expenseitem(),Expenseitem(),Expenseitem(),Expenseitem(),Expenseitem(),
+          Expenseitem(),Expenseitem(),Expenseitem(),
         ],
       ),
     );

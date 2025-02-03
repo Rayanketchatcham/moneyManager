@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Expenseitem extends StatefulWidget {
   const Expenseitem({super.key});
@@ -8,33 +9,29 @@ class Expenseitem extends StatefulWidget {
 }
 
 class _ExpenseitemState extends State<Expenseitem> {
-  int amount = 50;
+  int amount = 5500;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 8),
       child: Container(
         height: 65,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Theme.of(context).colorScheme.secondary,
-        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 0),
               child: Row(
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: Theme.of(context).colorScheme.tertiary,
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.deepOrange,
                     ),
                     width: 50,
                     height: 50,
                     child: Icon(
-                      Icons.coffee,
+                      Icons.attach_money,
                       color: Colors.white,
                     ),
                   ),
@@ -46,7 +43,7 @@ class _ExpenseitemState extends State<Expenseitem> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Coffee',
+                        'Salary',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,
@@ -54,9 +51,9 @@ class _ExpenseitemState extends State<Expenseitem> {
                         ),
                       ),
                       Text(
-                        'With petter brand',
+                        'Today',
                         style: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Colors.grey,
                             fontSize: 13,
                             fontWeight: FontWeight.bold),
                       ),
@@ -67,25 +64,15 @@ class _ExpenseitemState extends State<Expenseitem> {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 25),
-              child: RichText(
-                  text: TextSpan(children: [
-                TextSpan(
-                  text: '\$',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black,
-                  ),
+              child:   Text(
+                 ' \$ '
+                     '${NumberFormat("#,##0.00").format(amount)}',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Colors.black,
                 ),
-                TextSpan(
-                  text: '${amount}',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black,
-                  ),
-                )
-              ])),
+              )
             )
           ],
         ),

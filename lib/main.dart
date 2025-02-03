@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:moneymanager/Pages/AccountPage.dart';
-import 'package:moneymanager/Pages/Homepage.dart';
+import 'package:moneymanager/Pages/Home.dart';
 import 'package:moneymanager/Pages/NotificationPage.dart';
 import 'package:moneymanager/Pages/SettingPage.dart';
 import 'package:moneymanager/Pages/ViewChart.dart';
-import 'package:moneymanager/Pages/addExpense.dart';
+import 'package:moneymanager/Pages/addTransaction.dart';
 import 'package:moneymanager/assets/app_colors.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp( 
       title: 'Money Manager',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -30,13 +30,13 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.backgroundColor,
       ),
       routes: {
-        '/': (context) => Homepage(),
-        '/addExpense': (context) => Addexpense(),
+        '/': (context) => Home(),
+        '/addTransaction': (context) => Addtransaction(),
         '/ViewChart': (context) => viewChart(),
         '/account': (context) => Accountpage(),
         '/notification': (context) => Notificationpage(),
         '/setting': (context) => Settingpage(),
-      },
+      }, 
     );
   }
 }

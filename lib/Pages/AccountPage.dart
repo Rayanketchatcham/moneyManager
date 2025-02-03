@@ -11,24 +11,17 @@ class _AccountpageState extends State<Accountpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios,
-              size: 18,
+        appBar: AppBar(
+
+          title:
+          Center(
+            child: Text(
+              'Account',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+
+
             ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
           ),
-        ),
-        title: Text(
-          'Account Page',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-        ),
-      ),
-    );
+        ));
   }
 }
